@@ -21,12 +21,13 @@ app.get('/', (req, res) => {
 });
 
 app.post('/genpass', (req, res) => {
-    const length = req.body.passwordLength;
+    let length = req.body.passwordLength;
+    let exlucion = req.body.symbols ? "'^¨`,?{}[]()<>.²=+ùµéèç"+'"' : false;
     const passgen = generator.generate({
         length: length,
-        numbers: true,
-        symbols: true,
-        exclude: "'^¨`,?{}[]()<>.²=+ùµéèç"+'"',
+        numbers: req.body.numb,
+        symbols: req.body.symbols,
+        exclude: exlucion,
     });
     res.json({password: passgen})
 });

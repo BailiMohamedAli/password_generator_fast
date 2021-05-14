@@ -6,7 +6,7 @@
       </header>
 
       <div class="w3-container">
-        <div class="apply_flex" style="padding: 2rem 5rem;">
+        <div class="apply_flex">
           <label class="w3-text-teal form_margin"><b>Password length</b></label>
           <input
             id="passlength"
@@ -19,14 +19,47 @@
             style="width: 16rem"
           />
         </div>
-        <div class="w3-orange w3-round-medium" style="width:80%; padding: 3rem; margin:auto; position:relative">
-            <code id="result" class="w3-text-white w3-large" style="margin: 2rem auto; width: 70%; word-wrap: break-word;" >password genration</code>
-            <i class="fas fa-copy w3-btn w3-round-medium w3-white clipboard_location" onclick="copy()"></i>
+        <div style="margin: 0 0 1.2rem 0">
+          <h2 class="w3-teal">add features to password</h2>
+          <div class="apply_flex_checkbox">
+            <label class="w3-text-teal form_margin" for="numbers"
+              >Numbers</label
+            >
+            <input type="checkbox" id="numbers" name="numbers" />
+          </div>
+          <div class="apply_flex_checkbox">
+            <label class="w3-text-teal form_margin" for="symbols"
+              >Symbols</label
+            >
+            <input type="checkbox" id="symbols" name="symbols" />
+          </div>
+        </div>
+        <div
+          class="w3-orange w3-round-medium"
+          style="width: 80%; padding: 3rem; margin: auto; position: relative"
+        >
+          <code
+            id="result"
+            class="w3-text-white w3-large"
+            style="margin: 2rem auto; width: 70%; word-wrap: break-word"
+            >password genration</code
+          >
+          <i
+            class="
+              fas
+              fa-copy
+              w3-btn w3-round-medium w3-white
+              clipboard_location
+            "
+            onclick="copy()"
+          ></i>
         </div>
         <button
           class="w3-btn w3-teal w3-margin w3-round-medium"
           onclick="genpass()"
-        >Generate</button>
+        >
+          Generate
+        </button>
       </div>
 
       <footer class="w3-container w3-teal"><br /><br /></footer>

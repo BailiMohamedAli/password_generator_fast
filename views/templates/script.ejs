@@ -1,11 +1,15 @@
 <script>
   async function genpass() {
-    var length = document.getElementById("passlength").value;
-    var outpt = document.getElementById("result");
+    let length = document.getElementById("passlength").value;
+    let numb = document.getElementById("numbers").checked;
+    let symbols = document.getElementById("symbols").checked;
+    let outpt = document.getElementById("result");
     if (!length || length < 8 || length > 48)
       return alert("password length out ofrange or empty");
     data = {
       passwordLength: length,
+      numb,
+      symbols
     };
     option = {
       method: "POST",
