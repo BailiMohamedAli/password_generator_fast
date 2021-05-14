@@ -1,0 +1,18 @@
+.block_length_42 {
+  width: 42rem;
+}
+
+.form_margin {
+  margin: 1rem 0;
+}
+
+.apply_flex {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.clipboard_location{
+  position: absolute;
+  top: 0.6rem;
+  right: 1rem;
+}

@@ -1,0 +1,29 @@
+{
+  "name": "password_generator_fast",
+  "version": "1.0.0",
+  "description": "a simple password generator using and NPM dependecy, no big deal but usefull",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/BailiMohamedAli/password_generator_fast.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/BailiMohamedAli/password_generator_fast/issues"
+  },
+  "homepage": "https://github.com/BailiMohamedAli/password_generator_fast#readme",
+  "dependencies": {
+    "ejs": "^3.1.6",
+    "express": "^4.17.1",
+    "generate-password": "^1.6.0"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.7"
+  }
+}

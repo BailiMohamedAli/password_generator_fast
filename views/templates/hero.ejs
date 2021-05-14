@@ -1,0 +1,36 @@
+<div class="w3-white hero_container">
+  <div class="w3-display-middle w3-margin-top w3-center">
+    <div class="w3-card w3-animate-bottom block_length_42">
+      <header class="w3-container w3-teal">
+        <h1>Gen Password</h1>
+      </header>
+
+      <div class="w3-container">
+        <div class="apply_flex" style="padding: 2rem 5rem;">
+          <label class="w3-text-teal form_margin"><b>Password length</b></label>
+          <input
+            id="passlength"
+            class="w3-input w3-border w3-light-grey form_margin"
+            type="number"
+            placeholder="number between 8 and 48"
+            value="8"
+            min="8"
+            max="48"
+            style="width: 16rem"
+          />
+        </div>
+        <div class="w3-orange w3-round-medium" style="width:80%; padding: 3rem; margin:auto; position:relative">
+            <code id="result" class="w3-text-white w3-large" style="margin: 2rem auto; width: 70%; word-wrap: break-word;" >password genration</code>
+            <i class="fas fa-copy w3-btn w3-round-medium w3-white clipboard_location" onclick="copy()"></i>
+        </div>
+        <button
+          class="w3-btn w3-teal w3-margin w3-round-medium"
+          onclick="genpass()"
+        >Generate</button>
+      </div>
+
+      <footer class="w3-container w3-teal"><br /><br /></footer>
+    </div>
+  </div>
+</div>
+<%- include('script') -%>

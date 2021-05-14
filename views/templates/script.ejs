@@ -1,0 +1,39 @@
+<script>
+  async function genpass() {
+    var length = document.getElementById("passlength").value;
+    var outpt = document.getElementById("result");
+    if (!length || length < 8 || length > 48)
+      return alert("password length out ofrange or empty");
+    data = {
+      passwordLength: length,
+    };
+    option = {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(data),
+    };
+    try {
+      const response = await fetch("/genpass", option);
+      const data = await response.json();
+      data.password
+        ? (outpt.innerHTML = data.password)
+        : (outpt.innerHTML = "server delai please retry");
+    } catch (error) {
+      console.log(error);
+    }
+  }
+  // copy to clipboard text
+  function copy() {
+    let copyText = document.getElementById("result").innerText;
+    let inputElement = document.createElement("input");
+    inputElement.setAttribute("value", copyText);
+    document.body.appendChild(inputElement);
+    inputElement.select();
+    document.execCommand("copy");
+    inputElement.parentNode.removeChild(inputElement);
+  }
+</script>
+
+
