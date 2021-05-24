@@ -22,7 +22,7 @@ app.get('/', (req, res) => {
 
 app.post('/genpass', (req, res) => {
     let length = req.body.passwordLength;
-    let exlucion = req.body.symbols ? "'^¨`,?{}[]()<>.²=+ùµéèç"+'"' : false;
+    let exlucion = req.body.symbols ? "'^¨`,?{}[]()<>.²=+ùµéèç;:! *"+'"' : false;
     const passgen = generator.generate({
         length: length,
         numbers: req.body.numb,
